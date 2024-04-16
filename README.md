@@ -76,7 +76,9 @@ If the user requests statistics based on the "genre" attribute, the output XML f
 ## Example of sequential and parallel execution
 ![image](https://github.com/VovaMitsura/internship_task_1/assets/95585344/2edf8d15-e784-4eac-8ae4-5d6d92e83509)
 
-![image](https://github.com/VovaMitsura/internship_task_1/assets/95585344/33b58596-bf7e-43b5-abf3-6e6578960324)
+![image](https://github.com/VovaMitsura/internship_task_1/assets/95585344/a8349e87-6c48-4ba7-b7ca-3f5c01adec46)
+
+
 
 
 
