@@ -7,10 +7,22 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.LinkedHashMap;
 
+/**
+ * Class to get statistic by attribute occurrence
+ *
+ * @param <E> type of resource
+ */
 public class AttributeStatistic<E> {
 
   private final Logger logger = Logger.getLogger(AttributeStatistic.class.getName());
 
+  /**
+   * Method to get statistic by attribute occurrence
+   *
+   * @param resources list of resources
+   * @param attribute attribute to get statistic by
+   * @return map with attribute values and their occurrences
+   */
   public Map<String, Integer> getStatByAttributeOccurrence(List<E> resources, String attribute) {
     return resources.stream()
             .map(resource -> getAttributeValue(resource, attribute))
@@ -21,6 +33,12 @@ public class AttributeStatistic<E> {
             ));
   }
 
+  /**
+   * Sort statistic by value in descending order
+   *
+   * @param statistic map with statistic
+   * @return sorted map by value
+   */
   public Map<String, Integer> sortStatistic(Map<String, Integer> statistic) {
     return statistic.entrySet().stream()
             .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())

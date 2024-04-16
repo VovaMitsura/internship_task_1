@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.logging.Logger;
 
+/**
+ * Writes statistics to XML file. Each item is represented as a pair of value and count.
+ */
 @AllArgsConstructor
 public class StatisticXMLWriter {
   private static final String FILE_NAME = "result/statistic_by_%s.xml";
@@ -19,6 +22,12 @@ public class StatisticXMLWriter {
 
   private final Logger logger = Logger.getLogger(StatisticXMLWriter.class.getName());
 
+  /**
+   * Method writes statistics for the attribute to the file.
+   *
+   * @param attribute attribute to write statistics for to the file
+   * @param items    map with items and their counts
+   */
   public void write(String attribute, Map<String, Integer> items) {
     String fileName = String.format(FILE_NAME, attribute);
     File file = new File(fileName);
